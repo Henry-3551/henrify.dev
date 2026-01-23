@@ -155,4 +155,40 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // Loader: Hide when page is ready
+    const loader = document.getElementById('loader');
+    if (loader) {
+        window.addEventListener('load', () => {
+            loader.style.opacity = '0';
+            setTimeout(() => loader.style.display = 'none', 500);
+        });
+    }
+
+    // Contact Form: Custom Thank You Message
+    const contactForm = document.getElementById('contact-form');
+    const thankYouMsg = document.getElementById('thank-you-message');
+    if (contactForm && thankYouMsg) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            // If honeypot is filled, silently fail
+            if (formData.get('_gotcha')) return;
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    contactForm.classList.add('hidden');
+                    thankYouMsg.classList.remove('hidden');
+                } else {
+                    alert('Sorry, there was a problem sending your message. Please try again later.');
+                }
+            })
+            .catch(() => {
+                alert('Sorry, there was a problem sending your message. Please try again later.');
+            });
+        });
+    }
 });

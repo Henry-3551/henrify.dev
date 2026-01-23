@@ -33,6 +33,16 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+        <!-- Animated Loading Screen -->
+        <div id="loader" style="position:fixed;z-index:9999;inset:0;display:flex;align-items:center;justify-content:center;background:#0F172A;transition:opacity 0.5s;">
+            <div class="flex flex-col items-center">
+                <span class="text-5xl font-extrabold flex items-center mb-4 animate-bounce">
+                    <!-- <span style="color: #10B981">&lt;</span><span style="color: white">/</span><span style="color: #10B981">&gt;</span> -->
+                </span>
+                <div class="loader-spinner mb-2"></div>
+                <!-- <span class="text-emerald-400 font-semibold tracking-wide animate-pulse">Loading Henrify.dev...</span> -->
+            </div>
+        </div>
     <nav class="fixed w-full z-50 top-0 start-0 backdrop-blur-md bg-slate-900/90 border-b border-emerald-500/10 transition-all duration-300">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
@@ -531,15 +541,20 @@
             </div>
 
             <div class="bg-slate-800 rounded-2xl shadow-xl p-8 md:p-10">
-                <form action="https://formspree.io/f/mqapelrk" method="POST" class="space-y-6">
+                <form id="contact-form" action="https://formspree.io/f/mykeelgn" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="John Doe">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="Will Smith">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="smith@example.com">
+                        </div>
+                        <!-- Honeypot field for spam protection -->
+                        <div style="display:none;">
+                            <label>Leave this field empty</label>
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
                         </div>
                     </div>
                     <div>
@@ -558,7 +573,12 @@
                     <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-emerald-500/20">
                         Send Message 🚀
                     </button>
-                    <!-- Custom Thank you message handling generally requires separate logic, but Formspree handles simple redirects -->
+                </form>
+                <!-- Thank You Message -->
+                <div id="thank-you-message" class="hidden text-center py-12">
+                    <h3 class="text-2xl font-bold text-emerald-500 mb-4">Thank you for reaching out! 🙌</h3>
+                    <p class="text-slate-300 text-lg">Your message has been sent successfully. I’ll get back to you as soon as possible.</p>
+                </div>
                 </form>
             </div>
         </div>
