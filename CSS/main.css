@@ -1,0 +1,105 @@
+:root{
+    --bg-main: #0F172A;
+    --text-main: #E2E8F0;
+    --navbar-bg: #020617;
+    --navbar-text: #E2E8F0;
+    --primary-btn: #10B981;
+    --btn-hover: #34D399;
+    --text-link: #6EE7B7;
+    --link-hover: #10B981 !important;
+    --section:  #1E293B;
+    --footer-bg: #020617;
+    --font-size-base: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-btn);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--btn-hover);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+.desktop-menu-text:hover{
+    color: var(--text-link);
+}
+.mobile-menu-bg {
+    background-color: var(--navbar-bg);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.mobile-menu-bg.open {
+    max-height: 50vh; /* Allow enough space for menu items */
+    opacity: 1;
+}
+
+.text-green {
+    color: var(--text-main);
+}
+.text-green:hover {
+    color: var(--link-hover);
+}
+.active-text {
+    color: var(--text-link);
+}
+section {
+    background-color: #0F172A;
+    min-height: 50vh;
+    width: 100%;
+}
+
+/* Project Card Hover Animation */
+#projects article {
+    transition: all 0.3s ease-in-out;
+}
+
+#projects article:hover {
+    transform: translateY(-10px);
+}
+
+/* Technical Skills Hover Animation */
+#about .grid > div {
+    transition: all 0.3s ease-in-out;
+}
+
+#about .grid > div:hover {
+    transform: translateY(-5px);
+}
+
+/* Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show-scroll {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}

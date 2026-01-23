@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "append_css",
+			"type": "shell",
+			"command": "powershell",
+			"args": [
+				"echo",
+				".show-scroll { opacity: 1 !important; transform: translateY(0) !important; }",
+				">>",
+				"CSS/main.css"
+			],
+			"group": "none"
+		}
+	]
+}

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Henrify - Full Stack Developer & Bot Specialist</title>
+    <meta name="title" content="Henrify - Full Stack Developer & Bot Specialist">
+    <meta name="description" content="Expert Full Stack Developer specializing in React, Node.js, and automated bots. Transforming ideas into high-performance digital solutions.">
+    <meta name="keywords" content="Full Stack Developer, Web Development, React, Node.js, WhatsApp Bots, Trading Bots, Henrify, Portfolio">
+    <meta name="author" content="Henrify">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://henrify.dev/">
+    <meta property="og:title" content="Henrify - Full Stack Developer & Bot Specialist">
+    <meta property="og:description" content="Expert Full Stack Developer specializing in React, Node.js, and automated bots. Transforming ideas into high-performance digital solutions.">
+    <meta property="og:image" content="https://henrify.dev/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://henrify.dev/">
+    <meta property="twitter:title" content="Henrify - Full Stack Developer & Bot Specialist">
+    <meta property="twitter:description" content="Expert Full Stack Developer specializing in React, Node.js, and automated bots. Transforming ideas into high-performance digital solutions.">
+    <meta property="twitter:image" content="https://henrify.dev/assets/og-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+
+    <link rel="stylesheet" href="CSS/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="fixed w-full z-50 top-0 start-0 backdrop-blur-md bg-slate-900/90 border-b border-emerald-500/10 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      
+      <div class="flex-shrink-0 flex items-center">
+        <a href="#" class="logo-name text-2xl font-bold text-gray-900 group flex items-center">
+          <span class="text-4xl font-extrabold mr-2 flex items-center leading-none mb-1"><span style="color: #10B981">&lt;</span><span style="color: white">/</span><span style="color: #10B981">&gt;</span></span> <span style="color: white">Henrify</span><span style="color: #10B981">.dev</span>
+        </a>
+      </div>
+
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-4">
+          <a href="#home" class="text-white-900 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors active-text">Home</a>
+          <a href="#about" class="text-white-500 desktop-menu-text px -3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+          <a href="#services" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+          <a href="#projects" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+          <a href="#contact" class="text-white desktop-menu-text px-4 py-2 rounded-md text-sm font-medium transition-colors">Contact Me</a>
+        </div>
+      </div>
+
+      <div class="-mr-2 flex md:hidden">
+        <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="md:hidden mobile-menu-bg border-t" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <a href="#home" class="block text-green px-3 py-2 rounded-md text-base font-medium active-text">Home</a>
+      <a href="#about" class="block text-green px-3 py-2 rounded-md text-base font-medium">About</a>
+      <a href="#services" class="block text-green px-3 py-2 rounded-md text-base font-medium">Services</a>
+      <a href="#projects" class="block text-green px-3 py-2 rounded-md text-base font-medium">Projects</a>
+      <a href="#contact" class="block text-green font-semibold px-3 py-2 rounded-md text-base">Contact Me</a>
+    </div>
+  </div>
+</nav>
+
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+            <!-- Text Content -->
+            <div class="w-full md:w-1/2 text-center md:text-left pt-8 md:pt-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                    Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-600">Henrify</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-slate-300 font-semibold mb-6">
+                    Full Stack Developer
+                </h2>
+                <p class="text-slate-400 text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                    I build active, user-friendly, and responsive websites. Passionate about creating seamless user experiences and bringing innovative ideas to life.
+                </p>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors shadow-lg shadow-emerald-500/30">
+                        View Work
+                    </a>
+                    <a href="#contact" class="px-6 py-3 border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 font-medium rounded-lg transition-colors">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Image/Visual -->
+            <div class="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                    <!-- Decorative blob -->
+                    <div class="absolute inset-0 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+                    <!-- Placeholder Image -->
+                    <div class="relative w-full h-full rounded-full border-4 border-slate-700 bg-slate-800 overflow-hidden flex items-center justify-center shadow-2xl">
+                        <!-- You can replace this emoji with an img tag later -->
+                        <span class="text-8xl">👨‍💻</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold text-white mb-4">Crafting digital experiences with passion</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        I'm distinctively focused on creating clean, efficient code that powers interactive web applications. My journey involves navigating through the full stack, ensuring that the visual interface is just as robust as the server architecture supporting it.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        When I'm not coding, I'm exploring new technologies and contributing to the developer community.
+                    </p>
+                    
+                    <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center px-6 py-3 border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white font-bold rounded-lg transition-all duration-300 group">
+                        Download CV
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    </a>
+                </div>
+                
+                <!-- Skills Grid -->
+                <div class="w-full md:w-1/2">
+                    <h3 class="text-xl font-bold text-white mb-6">Technical Skills</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <!-- Skill Item -->
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-emerald-500 transition-colors text-center group">
+                            <span class="block text-emerald-500 font-bold mb-1">Frontend</span>
+                            <span class="text-slate-300 text-sm">React / Vue</span>
+                        </div>
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-emerald-500 transition-colors text-center group">
+                            <span class="block text-emerald-500 font-bold mb-1">Styling</span>
+                            <span class="text-slate-300 text-sm">Tailwind CSS</span>
+                        </div>
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-emerald-500 transition-colors text-center group">
+                            <span class="block text-emerald-500 font-bold mb-1">Backend</span>
+                            <span class="text-slate-300 text-sm">Node.js</span>
+                        </div>
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-emerald-500 transition-colors text-center group">
+                            <span class="block text-emerald-500 font-bold mb-1">Database</span>
+                            <span class="text-slate-300 text-sm">PostgreSQL</span>
+                        </div>
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-emerald-500 transition-colors text-center group">
+                            <span class="block text-emerald-500 font-bold mb-1">Tools</span>
+                            <span class="text-slate-300 text-sm">Git & GitHub</span>
+                        </div>
+                        <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-emerald-500 transition-colors text-center group">
+                            <span class="block text-emerald-500 font-bold mb-1">Design</span>
+                            <span class="text-slate-300 text-sm">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">My Services</h2>
+                <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                        <span class="text-3xl">💻</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Web Development</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Building responsive, high-performance websites using modern technologies like React, Vue, and Tailwind CSS.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                        <span class="text-3xl">⚙️</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Backend Systems</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Robust server-side architecture and API development using Node.js, Python, and SQL/NoSQL databases.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                        <span class="text-3xl">🤖</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Bot Development</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Custom automation bots for WhatsApp, Telegram, and Trading platforms to streamline your operations.
+                    </p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                        <span class="text-3xl">🎨</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">UI/UX Design</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Creating intuitive and visually appealing user interfaces that provide excellent user experiences.
+                    </p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                        <span class="text-3xl">🧩</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">API Integration</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Seamlessly connecting third-party services like payment gateways, maps, and social media APIs.
+                    </p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+                        <span class="text-3xl">🚀</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">SEO & Performance</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Optimizing websites for search engines and ensuring lightning-fast load times for better retention.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 mt-4">A selection of my recent work</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🛒</span>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-semibold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">E-Commerce Dashboard</h3>
+                        <p class="text-slate-400 text-sm mb-4">A comprehensive dashboard for managing products, orders, and analytics.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">React</span>
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Tailwind</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 2 -->
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">📱</span>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-semibold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Social Platform</h3>
+                        <p class="text-slate-400 text-sm mb-4">Real-time social networking app with messaging and feed features.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Node.js</span>
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Socket.io</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 3 -->
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">⚡</span>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-semibold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Task Application</h3>
+                        <p class="text-slate-400 text-sm mb-4">Productivity tool for team collaboration and task tracking.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Vue.js</span>
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Firebase</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 4: WhatsApp Bot -->
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🤖</span>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-semibold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">WhatsApp Service Bot</h3>
+                        <p class="text-slate-400 text-sm mb-4">Automated customer support agent integrating natural language processing.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Node.js</span>
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">WhatsApp API</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 5: Crypto Bot -->
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">📈</span>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-semibold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Crypto Trading Bot</h3>
+                        <p class="text-slate-400 text-sm mb-4">Algorithm-driven trading bot capable of executing high-frequency trades.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Python</span>
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Binance API</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project Card 6: Movie Website -->
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
+                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎬</span>
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <span class="text-white font-semibold">View Project</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Movie Discovery App</h3>
+                        <p class="text-slate-400 text-sm mb-4">Interactive platform to browse movies, watch trailers, and read reviews.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Next.js</span>
+                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">TMDb API</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-12 bg-slate-900 border-t border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4 hover:bg-slate-800/50 rounded-lg transition-colors animate-fade-in-up">
+                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="50">0+</span>
+                    <span class="text-slate-400 text-sm md:text-base font-medium">Clients Worldwide</span>
+                </div>
+                <div class="p-4 hover:bg-slate-800/50 rounded-lg transition-colors animate-fade-in-up delay-100">
+                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="120">0+</span>
+                    <span class="text-slate-400 text-sm md:text-base font-medium">Projects Completed</span>
+                </div>
+                <div class="p-4 hover:bg-slate-800/50 rounded-lg transition-colors animate-fade-in-up delay-200">
+                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="5">0+</span>
+                    <span class="text-slate-400 text-sm md:text-base font-medium">Years Experience</span>
+                </div>
+                <div class="p-4 hover:bg-slate-800/50 rounded-lg transition-colors animate-fade-in-up delay-300">
+                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="100">0%</span>
+                    <span class="text-slate-400 text-sm md:text-base font-medium">Satisfaction Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Client Testimonials</h2>
+                <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-slate-900 p-8 rounded-xl shadow-lg relative group hover:-translate-y-2 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-emerald-500/20 absolute top-6 right-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg>
+                    <p class="text-slate-300 mb-6 italic relative z-10">"Henrify transformed our outdated website into a modern, high-converting masterpiece. The attention to detail is unmatched."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-emerald-500 font-bold mr-3">JD</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">John Doe</h4>
+                            <p class="text-slate-500 text-xs">CEO, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-slate-900 p-8 rounded-xl shadow-lg relative group hover:-translate-y-2 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-emerald-500/20 absolute top-6 right-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg>
+                    <p class="text-slate-300 mb-6 italic relative z-10">"The WhatsApp bot Henrify improved our customer response time by 200%. Incredible work and great communication."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-emerald-500 font-bold mr-3">AS</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Sarah Allen</h4>
+                            <p class="text-slate-500 text-xs">Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-slate-900 p-8 rounded-xl shadow-lg relative group hover:-translate-y-2 transition-transform duration-300">
+                    <svg class="w-10 h-10 text-emerald-500/20 absolute top-6 right-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg>
+                    <p class="text-slate-300 mb-6 italic relative z-10">"Fast, reliable, and extremely talented. The crypto trading bot has been running flawlessly for months."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-emerald-500 font-bold mr-3">MR</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">Mike Ross</h4>
+                            <p class="text-slate-500 text-xs">Investor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-slate-900 border-b border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-slate-700 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
+                        <span class="text-white font-medium">What services do you offer?</span>
+                        <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content bg-slate-800/50 max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 text-slate-400">
+                            I specialize in Full Stack Development, offering services in web application development, custom bots (WhatsApp/Trading), API integration, and responsive UI/UX implementation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="border border-slate-700 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
+                        <span class="text-white font-medium">How long does a project take?</span>
+                        <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content bg-slate-800/50 max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 text-slate-400">
+                            Timeline varies based on complexity. A simple landing page might take 3-5 days, while a full e-commerce or SaaS platform could take 4-8 weeks. We can discuss your specific timeline during consultation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="border border-slate-700 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
+                        <span class="text-white font-medium">Do you provide maintenance?</span>
+                        <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content bg-slate-800/50 max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 text-slate-400">
+                            Yes! I offer ongoing support and maintenance packages to ensure your website or application runs smoothly after launch.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-slate-700 rounded-lg overflow-hidden">
+                    <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
+                        <span class="text-white font-medium">What is your pricing model?</span>
+                        <svg class="w-5 h-5 text-emerald-500 transform transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="faq-content bg-slate-800/50 max-h-0 overflow-hidden transition-all duration-300">
+                        <div class="px-6 py-4 text-slate-400">
+                            I offer both fixed-project pricing and hourly rates depending on the nature of the work. I believe in transparent pricing with no hidden fees.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's Work Together</h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                    Have a project in mind? Fill out the form below or send me an email, and I'll get back to you within 24 hours.
+                </p>
+            </div>
+
+            <div class="bg-slate-800 rounded-2xl shadow-xl p-8 md:p-10">
+                <form action="https://formspree.io/f/mqapelrk" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
+                         <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors">
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Project Proposal">Project Proposal</option>
+                            <option value="Consultation">Consultation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-emerald-500/20">
+                        Send Message 🚀
+                    </button>
+                    <!-- Custom Thank you message handling generally requires separate logic, but Formspree handles simple redirects -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center bg-transparent">
+            <div class="mb-4 md:mb-0">
+                 <span class="text-2xl font-bold text-white flex items-center"><span class="text-4xl font-extrabold mr-2 flex items-center leading-none mb-1"><span style="color: #10B981">&lt;</span><span class="text-white">/</span><span style="color: #10B981">&gt;</span></span> Henrify<span class="text-emerald-500">.dev</span></span>
+            </div>
+            <div class="flex space-x-6">
+                <!-- Social Links -->
+                <a href="https://github.com/Henry-3551" class="text-slate-400 hover:text-emerald-500 transition-colors transform hover:scale-110" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- Instagram Icon -->
+                <a href="https://www.instagram.com/resilient_037" class="text-slate-400 hover:text-emerald-500 transition-colors transform hover:scale-110" aria-label="Instagram" target="_blank" rel="noopener">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 3.25a5.25 5.25 0 1 1-5.25 5.25A5.25 5.25 0 0 1 12 6.75zm0 1.5a3.75 3.75 0 1 0 3.75 3.75A3.75 3.75 0 0 0 12 8.25zm5.25-.75a1 1 0 1 1-1 1a1 1 0 0 1 1-1z"/>
+                    </svg>
+                </a>
+                <!-- X (Twitter) Icon -->
+                <a href="https://x.com/Chukwuemerie_22" class="text-slate-400 hover:text-emerald-500 transition-colors transform hover:scale-110" aria-label="X" target="_blank" rel="noopener">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                    </svg>
+                </a>
+            </div>
+            <div class="mt-4 md:mt-0 text-slate-500 text-sm">
+                &copy; 2026 Henrify. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" id="back-to-top" class="fixed bottom-8 right-8 bg-emerald-500 hover:bg-emerald-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform translate-y-20 opacity-0 z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </a>
+
+   <script src="JS/app.js"></script>
+</body>
+</html>
