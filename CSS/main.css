@@ -1,3 +1,8 @@
+/* Fade-out animation for thank you message */
+.fade-out {
+    opacity: 0 !important;
+    transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1);
+}
 /* Loader Spinner Animation */
 .loader-spinner {
     width: 40px;
@@ -108,12 +113,21 @@ section {
     transition: all 0.8s ease-out;
 }
 
-#home.reveal {
+
+#home.reveal,
+#about.reveal,
+#services.reveal,
+#projects.reveal,
+#contact.reveal {
     opacity: 0;
     transform: translateY(80px) scale(0.97);
     transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
-#home.reveal.active {
+#home.reveal.active,
+#about.reveal.active,
+#services.reveal.active,
+#projects.reveal.active,
+#contact.reveal.active {
     opacity: 1;
     transform: translateY(0) scale(1);
 }

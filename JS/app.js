@@ -13,10 +13,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, { threshold: 0.1 });
 
+
+    // Hero sections for slide-up effect
+    const heroSections = [
+        document.getElementById('about'),
+        document.getElementById('services'),
+        document.getElementById('projects'),
+        document.getElementById('contact')
+    ].filter(Boolean);
+
+    heroSections.forEach(section => {
+        section.classList.add(section.id, 'reveal');
+        observer.observe(section);
+    });
+
+    // All other sections (for backward compatibility)
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
-        section.classList.add('reveal');
-        observer.observe(section);
+        if (!heroSections.includes(section)) {
+            section.classList.add('reveal');
+            observer.observe(section);
+        }
     });
 
     // Detailed Element Animation (Cards, Items)
@@ -150,10 +167,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
         navLinks.forEach(link => {
             link.classList.remove('active-text');
-            if (link.getAttribute('href') === `#${current}`) {
+        });
+
+        let found = false;
+        navLinks.forEach(link => {
+            // Section links use #id, page links use filename
+            if (current && link.getAttribute('href') === `#${current}`) {
                 link.classList.add('active-text');
+                found = true;
             }
         });
+
+        // If no section is active, highlight the nav link for the current page
+        if (!found) {
+            const page = window.location.pathname.split('/').pop();
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === page) {
+                    link.classList.add('active-text');
+                }
+            });
+        }
     });
     // Loader: Hide when page is ready
     const loader = document.getElementById('loader');
@@ -182,6 +215,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok) {
                     contactForm.classList.add('hidden');
                     thankYouMsg.classList.remove('hidden');
+                    thankYouMsg.classList.remove('fade-out');
+                    // After 3.5s, fade out thank you and show form again
+                    setTimeout(() => {
+                        thankYouMsg.classList.add('fade-out');
+                        setTimeout(() => {
+                            thankYouMsg.classList.add('hidden');
+                            thankYouMsg.classList.remove('fade-out');
+                            contactForm.classList.remove('hidden');
+                            contactForm.reset();
+                        }, 600); // match CSS fade duration
+                    }, 3500);
                 } else {
                     alert('Sorry, there was a problem sending your message. Please try again later.');
                 }
