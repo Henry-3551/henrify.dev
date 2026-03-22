@@ -1,6 +1,16 @@
 function toggleMenu() {
     const menu = document.getElementById('mobile-menu');
+    const button = document.querySelector('button[onclick="toggleMenu()"]');
+    const icon = button.querySelector('svg');
     menu.classList.toggle('open');
+    // Toggle icon between hamburger and close (X)
+    if (menu.classList.contains('open')) {
+        // Change to X icon
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />';
+    } else {
+        // Change to hamburger icon
+        icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+    }
 }
 
 // Scroll Reveal Animation
