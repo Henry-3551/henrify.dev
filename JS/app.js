@@ -70,6 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    // View More Projects button toggles hidden project cards
+    const extraProjectCards = document.querySelectorAll('[data-project-card="extra"]');
+    const viewMoreProjectsBtn = document.getElementById('view-more-projects');
+    if (viewMoreProjectsBtn && extraProjectCards.length) {
+        viewMoreProjectsBtn.addEventListener('click', () => {
+            extraProjectCards.forEach(card => card.classList.remove('hidden'));
+            viewMoreProjectsBtn.classList.add('hidden');
+        });
+    }
+
 
     // Number Counter Animation
     const counters = document.querySelectorAll('.counter');
