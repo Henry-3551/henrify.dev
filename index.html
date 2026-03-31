@@ -476,7 +476,7 @@
                 </article>
 
                 <!-- Project Card 3 -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group hidden" data-project-card="extra">
                     <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
                         <span class="text-6xl group-hover:scale-110 transition-transform duration-300">⚡</span>
                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -508,7 +508,7 @@
                 </article>
 
                 <!-- Project Card 4: WhatsApp Bot -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
+                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group hidden" data-project-card="extra">
                     <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
                         <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🤖</span>
                         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
@@ -624,11 +624,11 @@
                     <span class="text-slate-400 text-sm md:text-base font-medium">Clients Worldwide</span>
                 </div>
                 <div class="p-4 hover:bg-slate-800/50 rounded-lg transition-colors animate-fade-in-up delay-100">
-                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="120">0+</span>
+                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="20">0+</span>
                     <span class="text-slate-400 text-sm md:text-base font-medium">Projects Completed</span>
                 </div>
                 <div class="p-4 hover:bg-slate-800/50 rounded-lg transition-colors animate-fade-in-up delay-200">
-                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="5">0+</span>
+                    <span class="counter block text-4xl md:text-5xl font-bold text-emerald-500 mb-2" data-target="4">0+</span>
                     <span class="text-slate-400 text-sm md:text-base font-medium">Years Experience</span>
                 </div>
                 <div class="p-4 hover:bg-slate-800/50 rounded-lg transition-colors animate-fade-in-up delay-300">
@@ -639,55 +639,9 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Client Testimonials</h2>
-                <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-slate-900 p-8 rounded-xl shadow-lg relative group hover:-translate-y-2 transition-transform duration-300">
-                    <svg class="w-10 h-10 text-emerald-500/20 absolute top-6 right-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg>
-                    <p class="text-slate-300 mb-6 italic relative z-10">"Henrify transformed our outdated website into a modern, high-converting masterpiece. The attention to detail is unmatched."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-emerald-500 font-bold mr-3">JD</div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">John Doe</h4>
-                            <p class="text-slate-500 text-xs">CEO, TechCorp</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="bg-slate-900 p-8 rounded-xl shadow-lg relative group hover:-translate-y-2 transition-transform duration-300">
-                    <svg class="w-10 h-10 text-emerald-500/20 absolute top-6 right-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg>
-                    <p class="text-slate-300 mb-6 italic relative z-10">"The WhatsApp bot Henrify improved our customer response time by 200%. Incredible work and great communication."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-emerald-500 font-bold mr-3">AS</div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Sarah Allen</h4>
-                            <p class="text-slate-500 text-xs">Marketing Director</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="bg-slate-900 p-8 rounded-xl shadow-lg relative group hover:-translate-y-2 transition-transform duration-300">
-                    <svg class="w-10 h-10 text-emerald-500/20 absolute top-6 right-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017V5H22.017V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM5.0166 21L5.0166 18C5.0166 16.8954 5.91203 16 7.0166 16H10.0166C10.5689 16 11.0166 15.5523 11.0166 15V9C11.0166 8.44772 10.5689 8 10.0166 8H6.0166C5.46432 8 5.0166 8.44772 5.0166 9V11C5.0166 11.5523 4.56889 12 4.0166 12H3.0166V5H13.0166V15C13.0166 18.3137 10.3303 21 7.0166 21H5.0166Z"></path></svg>
-                    <p class="text-slate-300 mb-6 italic relative z-10">"Fast, reliable, and extremely talented. The crypto trading bot has been running flawlessly for months."</p>
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center text-emerald-500 font-bold mr-3">MR</div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">Mike Ross</h4>
-                            <p class="text-slate-500 text-xs">Investor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Testimonials Section (temporarily hidden until real submissions arrive) -->
+    <section id="testimonials" class="hidden">
+        <!-- Content intentionally preserved for future activation -->
     </section>
 
     <!-- FAQ Section -->
