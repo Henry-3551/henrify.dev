@@ -152,22 +152,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Back to Top Button
+    // Back to Top Button (mobile-safe)
     const backToTopBtn = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show-scroll');
-        } else {
-            backToTopBtn.classList.remove('show-scroll');
-        }
-    });
+    if (backToTopBtn) {
+        const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        const toggleBackToTop = () => {
+            if (getScrollPosition() > 300) {
+                backToTopBtn.classList.add('show-scroll');
+            } else {
+                backToTopBtn.classList.remove('show-scroll');
+            }
+        };
 
-    if(backToTopBtn) {
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        window.addEventListener('scroll', toggleBackToTop, { passive: true });
+        toggleBackToTop();
+
+        backToTopBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            const supportsSmoothScroll = 'scrollBehavior' in document.documentElement.style;
+            if (supportsSmoothScroll) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
         });
     }
 

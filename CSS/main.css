@@ -141,3 +141,106 @@ section {
     opacity: 1 !important;
     transform: translateY(0) !important;
 }
+
+.hero-orbit {
+    position: relative;
+}
+
+.hero-orbit-icon {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    border-radius: 9999px;
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    background: rgba(15, 23, 42, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.45);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    animation: orbit-float 6s ease-in-out infinite;
+    font-size: 1.5rem;
+}
+
+.hero-orbit-icon:hover {
+    transform: scale(1.15);
+    border-color: #34D399;
+}
+
+.hero-orbit-icon i {
+    color: inherit;
+}
+
+.hero-orbit-icon[data-icon="react"] {
+    top: -6%;
+    left: 50%;
+    margin-left: -22px;
+    color: #61DAFB;
+    animation-delay: 0s;
+}
+
+.hero-orbit-icon[data-icon="tailwind"] {
+    top: 8%;
+    right: -5%;
+    color: #38BDF8;
+    animation-delay: 0.4s;
+}
+
+.hero-orbit-icon[data-icon="node"] {
+    top: 45%;
+    right: -8%;
+    margin-top: -22px;
+    color: #68A063;
+    animation-delay: 0.8s;
+}
+
+.hero-orbit-icon[data-icon="python"] {
+    bottom: 8%;
+    right: -3%;
+    color: #FFD43B;
+    animation-delay: 1.2s;
+}
+
+.hero-orbit-icon[data-icon="javascript"] {
+    bottom: -6%;
+    left: 50%;
+    margin-left: -22px;
+    color: #F7DF1E;
+    animation-delay: 1.6s;
+}
+
+.hero-orbit-icon[data-icon="github"] {
+    bottom: 6%;
+    left: 4%;
+    color: #FFFFFF;
+    animation-delay: 2s;
+}
+
+.hero-orbit-icon[data-icon="git"] {
+    top: 50%;
+    left: -7%;
+    margin-top: -22px;
+    color: #F14E32;
+    animation-delay: 2.4s;
+}
+
+.hero-orbit-icon[data-icon="postgres"] {
+    top: 6%;
+    left: 3%;
+    color: #336791;
+    animation-delay: 2.8s;
+}
+
+.hero-orbit-icon[data-icon="sqlite"] {
+    top: 24%;
+    left: -6%;
+    margin-top: -22px;
+    color: #0F80CC;
+    animation-delay: 3.2s;
+}
+
+@keyframes orbit-float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
