@@ -186,27 +186,11 @@ section {
     animation-delay: 0.4s;
 }
 
-.hero-orbit-icon[data-icon="node"] {
-    top: 45%;
-    right: -8%;
-    margin-top: -22px;
-    color: #68A063;
-    animation-delay: 0.8s;
-}
-
 .hero-orbit-icon[data-icon="python"] {
     bottom: 8%;
     right: -3%;
     color: #FFD43B;
     animation-delay: 1.2s;
-}
-
-.hero-orbit-icon[data-icon="javascript"] {
-    bottom: -6%;
-    left: 50%;
-    margin-left: -22px;
-    color: #F7DF1E;
-    animation-delay: 1.6s;
 }
 
 .hero-orbit-icon[data-icon="github"] {
@@ -216,27 +200,11 @@ section {
     animation-delay: 2s;
 }
 
-.hero-orbit-icon[data-icon="git"] {
-    top: 50%;
-    left: -7%;
-    margin-top: -22px;
-    color: #F14E32;
-    animation-delay: 2.4s;
-}
-
 .hero-orbit-icon[data-icon="postgres"] {
     top: 6%;
     left: 3%;
     color: #336791;
     animation-delay: 2.8s;
-}
-
-.hero-orbit-icon[data-icon="sqlite"] {
-    top: 24%;
-    left: -6%;
-    margin-top: -22px;
-    color: #0F80CC;
-    animation-delay: 3.2s;
 }
 
 @keyframes orbit-float {
