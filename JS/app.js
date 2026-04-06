@@ -234,33 +234,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(contactForm);
             // If honeypot is filled, silently fail
             if (formData.get('_gotcha')) return;
-            fetch(contactForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(response => {
-                if (response.ok) {
-                    contactForm.classList.add('hidden');
-                    thankYouMsg.classList.remove('hidden');
+
+            contactForm.classList.add('hidden');
+            thankYouMsg.classList.remove('hidden');
+            thankYouMsg.classList.remove('fade-out');
+
+            // After 3.5s, fade out thank you and show form again
+            setTimeout(() => {
+                thankYouMsg.classList.add('fade-out');
+                setTimeout(() => {
+                    thankYouMsg.classList.add('hidden');
                     thankYouMsg.classList.remove('fade-out');
-                    // After 3.5s, fade out thank you and show form again
-                    setTimeout(() => {
-                        thankYouMsg.classList.add('fade-out');
-                        setTimeout(() => {
-                            thankYouMsg.classList.add('hidden');
-                            thankYouMsg.classList.remove('fade-out');
-                            contactForm.classList.remove('hidden');
-                            contactForm.reset();
-                        }, 600); // match CSS fade duration
-                    }, 3500);
-                } else {
-                    alert('Sorry, there was a problem sending your message. Please try again later.');
-                }
-            })
-            .catch(() => {
-                alert('Sorry, there was a problem sending your message. Please try again later.');
-            });
+                    contactForm.classList.remove('hidden');
+                    contactForm.reset();
+                }, 600); // match CSS fade duration
+            }, 3500);
+
+            contactForm.submit();
         });
     }
 });
