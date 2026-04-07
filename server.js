@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const rateLimit = require("express-rate-limit");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 require("dotenv").config();
 
 const app = express();
@@ -14,11 +14,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname)));
 
 const requiredEnv = [
-  "SMTP_HOST",
-  "SMTP_PORT",
-  "SMTP_USER",
-  "SMTP_PASS",
-  "TO_EMAIL"
+  "RESEND_API_KEY",
+  "TO_EMAIL",
+  "FROM_EMAIL"
 ];
 
 const missingEnv = requiredEnv.filter((key) => !process.env[key]);
@@ -86,17 +84,9 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
     }
   }
 
-  const transport = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT),
-    secure: Number(process.env.SMTP_PORT) === 465,
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS
-    }
-  });
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
-  const fromAddress = process.env.FROM_EMAIL || process.env.SMTP_USER;
+  const fromAddress = process.env.FROM_EMAIL;
   const toAddress = process.env.TO_EMAIL;
 
   const safeName = escapeHtml(safeNameInput);
@@ -105,11 +95,12 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
   const safeMessage = escapeHtml(safeMessageInput).replace(/\n/g, "<br>");
 
   try {
-    await transport.sendMail({
+    await resend.emails.send({
       from: `Henrify Portfolio <${fromAddress}>`,
-      to: toAddress,
+      to: [toAddress],
       replyTo: safeEmailInput,
       subject: `[Portfolio] ${safeSubjectInput}`,
+      text: `Name: ${safeNameInput}\nEmail: ${safeEmailInput}\nSubject: ${safeSubjectInput}\n\n${safeMessageInput}`,
       html: `
         <!DOCTYPE html>
         <html lang="en">
