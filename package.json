@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "build": "npm run build:css",
-    "build:css": "postcss CSS/tailwind.css -o CSS/tailwind-output.css",
-    "watch:css": "postcss CSS/tailwind.css -o CSS/tailwind-output.css -w",
+    "build:css": "npx postcss CSS/tailwind.css -o CSS/tailwind-output.css",
+    "watch:css": "npx postcss CSS/tailwind.css -o CSS/tailwind-output.css -w",
     "start": "node server.js"
   },
   "dependencies": {
