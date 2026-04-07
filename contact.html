@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-34BLFY2QJF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-34BLFY2QJF');
-</script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-34BLFY2QJF"></script> -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-34BLFY2QJF');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,9 +31,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="ASSETS/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="ASSETS/favicon-16x16.png">
     <link rel="manifest" href="ASSETS/site.webmanifest">
+    <link rel="stylesheet" href="CSS/tailwind-output.css">
     <link rel="stylesheet" href="CSS/main.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -113,7 +111,7 @@
                 </p>
             </div>
             <div class="bg-slate-800 rounded-2xl shadow-xl p-8 md:p-10">
-                <form id="contact-form" action="https://formsubmit.co/henrifydev@gmail.com" method="POST" target="contact-form-target" class="space-y-6">
+                <form id="contact-form" action="/api/contact" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
@@ -123,12 +121,12 @@
                             <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
                             <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="smith@example.com">
                         </div>
-                        <input type="hidden" name="_captcha" value="false">
                         <!-- Honeypot field for spam protection -->
                         <div style="display:none;">
                             <label>Leave this field empty</label>
                             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
                         </div>
+                        <input type="hidden" name="form_started_at" value="">
                     </div>
                     <div>
                         <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
@@ -152,7 +150,7 @@
                     <h3 class="text-2xl font-bold text-emerald-500 mb-4">Thank you for reaching out! 🙌</h3>
                     <p class="text-slate-300 text-lg">Your message has been sent successfully. I’ll get back to you as soon as possible.</p>
                 </div>
-                <iframe name="contact-form-target" class="hidden" title="Contact form submission target"></iframe>
+                <p id="contact-error" class="hidden text-sm text-red-400 text-center">Something went wrong. Please try again.</p>
             </div>
         </div>
     </section>

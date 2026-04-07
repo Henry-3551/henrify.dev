@@ -13,6 +13,19 @@ function toggleMenu() {
     }
 }
 
+// Loader: Hide even if some assets stall
+const loader = document.getElementById('loader');
+if (loader) {
+    const hideLoader = () => {
+        if (loader.style.display === 'none') return;
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+    };
+
+    window.addEventListener('load', hideLoader, { once: true });
+    setTimeout(hideLoader, 2500);
+}
+
 // Scroll Reveal Animation
 document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
@@ -216,41 +229,60 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-    // Loader: Hide when page is ready
-    const loader = document.getElementById('loader');
-    if (loader) {
-        window.addEventListener('load', () => {
-            loader.style.opacity = '0';
-            setTimeout(() => loader.style.display = 'none', 500);
-        });
-    }
-
     // Contact Form: Custom Thank You Message
     const contactForm = document.getElementById('contact-form');
     const thankYouMsg = document.getElementById('thank-you-message');
+    const contactError = document.getElementById('contact-error');
     if (contactForm && thankYouMsg) {
-        contactForm.addEventListener('submit', function(e) {
+        const startedAtInput = contactForm.querySelector('input[name="form_started_at"]');
+        if (startedAtInput && !startedAtInput.value) {
+            startedAtInput.value = Date.now();
+        }
+
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
+
             const formData = new FormData(contactForm);
-            // If honeypot is filled, silently fail
             if (formData.get('_gotcha')) return;
 
-            contactForm.classList.add('hidden');
-            thankYouMsg.classList.remove('hidden');
-            thankYouMsg.classList.remove('fade-out');
+            if (contactError) contactError.classList.add('hidden');
 
-            // After 3.5s, fade out thank you and show form again
-            setTimeout(() => {
-                thankYouMsg.classList.add('fade-out');
+            const payload = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message'),
+                _gotcha: formData.get('_gotcha'),
+                form_started_at: formData.get('form_started_at')
+            };
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+
+                contactForm.classList.add('hidden');
+                thankYouMsg.classList.remove('hidden');
+                thankYouMsg.classList.remove('fade-out');
+
                 setTimeout(() => {
-                    thankYouMsg.classList.add('hidden');
-                    thankYouMsg.classList.remove('fade-out');
-                    contactForm.classList.remove('hidden');
-                    contactForm.reset();
-                }, 600); // match CSS fade duration
-            }, 3500);
-
-            contactForm.submit();
+                    thankYouMsg.classList.add('fade-out');
+                    setTimeout(() => {
+                        thankYouMsg.classList.add('hidden');
+                        thankYouMsg.classList.remove('fade-out');
+                        contactForm.classList.remove('hidden');
+                        contactForm.reset();
+                    }, 600);
+                }, 3500);
+            } catch (error) {
+                if (contactError) contactError.classList.remove('hidden');
+            }
         });
     }
 });

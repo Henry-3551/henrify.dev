@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-34BLFY2QJF"></script>
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-34BLFY2QJF"></script> -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-34BLFY2QJF');
     </script>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Primary Meta Tags -->
     <title>Henrify - Full Stack Developer & Bot Specialist</title>
     <meta name="title" content="Henrify - Full Stack Developer & Bot Specialist">
@@ -44,88 +43,93 @@
     <link rel="icon" type="image/png" sizes="16x16" href="ASSETS/favicon-16x16.png">
     <link rel="manifest" href="ASSETS/site.webmanifest">
 
+    <link rel="stylesheet" href="CSS/tailwind-output.css">
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/devicon.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Henrify.dev",
-    "url": "https://henrify.dev/",
-    "author": {
-        "@type": "Person",
-        "name": "Henrify"
-    },
-    "description": "Expert Full Stack Developer specializing in Python, React, Node.js, and automated bots. Transforming ideas into high-performance digital solutions.",
-    "sameAs": [
-        "https://github.com/Henry-3551",
-        "https://x.com/Chukwuemerie_22",
-        "https://tiktok.com/@de_enigmatic_henry",
-        "https://www.instagram.com/henrify.dev"
-    ]
-}
-</script>
+    <style>
+        @font-face {
+            font-family: "devicon";
+            src: url("https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/fonts/devicon.woff?iehcku") format("woff"),
+                 url("https://cdn.jsdelivr.net/gh/devicons/devicon@2.16.0/fonts/devicon.svg?iehcku#devicon") format("svg");
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Henrify.dev",
+        "url": "https://henrify.dev/",
+        "author": {
+            "@type": "Person",
+            "name": "Henrify"
+        },
+        "description": "Expert Full Stack Developer specializing in Python, React, Node.js, and automated bots. Transforming ideas into high-performance digital solutions.",
+        "sameAs": [
+            "https://github.com/Henry-3551",
+            "https://x.com/Chukwuemerie_22",
+            "https://tiktok.com/@de_enigmatic_henry",
+            "https://www.instagram.com/henrify.dev"
+        ]
+    }
+    </script>
 </head>
 <body>
-        <!-- Animated Loading Screen -->
-        <div id="loader" style="position:fixed;z-index:9999;inset:0;display:flex;align-items:center;justify-content:center;background:#0F172A;transition:opacity 0.5s;">
-            <div class="flex flex-col items-center">
-                <span class="text-5xl font-extrabold flex items-center mb-4 animate-bounce">
-                    <!-- <span style="color: #10B981">&lt;</span><span style="color: white">/</span><span style="color: #10B981">&gt;</span> -->
-                </span>
-                <div class="loader-spinner mb-2"></div>
-                <!-- <span class="text-emerald-400 font-semibold tracking-wide animate-pulse">Loading Henrify.dev...</span> -->
+    <!-- Animated Loading Screen -->
+    <div id="loader" style="position:fixed;z-index:9999;inset:0;display:flex;align-items:center;justify-content:center;background:#0F172A;transition:opacity 0.5s;">
+        <div class="flex flex-col items-center">
+            <span class="text-5xl font-extrabold flex items-center mb-4 animate-bounce"></span>
+            <div class="loader-spinner mb-2"></div>
+        </div>
+    </div>
+
+    <nav class="fixed w-full z-50 top-0 start-0 backdrop-blur-md bg-slate-900/90 border-b border-emerald-500/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="logo-name text-2xl font-bold text-gray-900 group flex items-center">
+                        <span class="text-4xl font-extrabold mr-2 flex items-center leading-none mb-1"><span style="color: #10B981">&lt;</span><span style="color: white">/</span><span style="color: #10B981">&gt;</span></span> <span style="color: white">Henrify</span><span style="color: #10B981">.dev</span>
+                    </a>
+                </div>
+
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-white-900 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors active-text">Home</a>
+                        <a href="about.html" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="services.html" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+                        <a href="projects.html" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="contact.html" class="text-white desktop-menu-text px-4 py-2 rounded-md text-sm font-medium transition-colors">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="-mr-2 flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-    <nav class="fixed w-full z-50 top-0 start-0 backdrop-blur-md bg-slate-900/90 border-b border-emerald-500/10 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      
-      <div class="flex-shrink-0 flex items-center">
-        <a href="#" class="logo-name text-2xl font-bold text-gray-900 group flex items-center">
-          <span class="text-4xl font-extrabold mr-2 flex items-center leading-none mb-1"><span style="color: #10B981">&lt;</span><span style="color: white">/</span><span style="color: #10B981">&gt;</span></span> <span style="color: white">Henrify</span><span style="color: #10B981">.dev</span>
-        </a>
-      </div>
 
-      <div class="hidden md:block">
-        <div class="ml-10 flex items-baseline space-x-4">
-          <a href="index.html" class="text-white-900 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors active-text">Home</a>
-          <a href="about.html" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-          <a href="services.html" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
-          <a href="projects.html" class="text-white-500 desktop-menu-text px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
-          <a href="contact.html" class="text-white desktop-menu-text px-4 py-2 rounded-md text-sm font-medium transition-colors">Contact Me</a>
+        <div class="md:hidden mobile-menu-bg border-t" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block text-green px-3 py-2 rounded-md text-base font-medium active-text">Home</a>
+                <a href="about.html" class="block text-green px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="services.html" class="block text-green px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="projects.html" class="block text-green px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="contact.html" class="block text-green font-semibold px-3 py-2 rounded-md text-base">Contact Me</a>
+            </div>
         </div>
-      </div>
-
-      <div class="-mr-2 flex md:hidden">
-        <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="md:hidden mobile-menu-bg border-t" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="block text-green px-3 py-2 rounded-md text-base font-medium active-text">Home</a>
-            <a href="about.html" class="block text-green px-3 py-2 rounded-md text-base font-medium">About</a>
-            <a href="services.html" class="block text-green px-3 py-2 rounded-md text-base font-medium">Services</a>
-            <a href="projects.html" class="block text-green px-3 py-2 rounded-md text-base font-medium">Projects</a>
-            <a href="contact.html" class="block text-green font-semibold px-3 py-2 rounded-md text-base">Contact Me</a>
-        </div>
-  </div>
-</nav>
-
+    </nav>
 
     <section id="home" class="min-h-screen flex items-center justify-center pt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
-            <!-- Text Content -->
             <div class="w-full md:w-1/2 text-center md:text-left pt-8 md:pt-0">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4">
                     Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-600">Henrify</span>
@@ -137,30 +141,19 @@
                     I build active, user-friendly, and responsive websites. Passionate about creating seamless user experiences and bringing innovative ideas to life.
                 </p>
                 <div class="flex justify-center md:justify-start space-x-4">
-                    <a href="projects.html" class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors shadow-lg shadow-emerald-500/30">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
+                    <a href="projects.html" class="inline-flex items-center px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors shadow-lg shadow-emerald-500/30">
                         <span>View Work</span>
                     </a>
-                    <a href="contact.html" class="inline-flex items-center gap-2 px-6 py-3 border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 font-medium rounded-lg transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 8h10M7 12h6" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.17-3.2A7.62 7.62 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                        </svg>
+                    <a href="contact.html" class="inline-flex items-center px-6 py-3 border border-emerald-500 text-emerald-400 hover:bg-emerald-500/10 font-medium rounded-lg transition-colors">
                         <span>Contact Me</span>
                     </a>
                 </div>
             </div>
-            
-            <!-- Image/Visual -->
+
             <div class="w-full md:w-1/2 flex justify-center mb-10 md:mb-0">
                 <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 hero-orbit">
-                    <!-- Decorative blob -->
                     <div class="absolute inset-0 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-                    <!-- Placeholder Image -->
                     <div class="relative w-full h-full rounded-full border-4 border-slate-700 bg-slate-800 overflow-hidden flex items-center justify-center shadow-2xl">
-                        <!-- You can replace this emoji with an img tag later -->
                         <span class="text-8xl">👨‍💻</span>
                     </div>
                     <span class="hero-orbit-icon" data-icon="react" aria-label="React"><i class="devicon-react-original"></i></span>
@@ -180,28 +173,19 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
                 <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
             </div>
-            
+
             <div class="flex flex-col md:flex-row gap-12 items-center">
                 <div class="w-full md:w-1/2">
                     <h3 class="text-2xl font-bold text-white mb-4">Crafting digital experiences with passion</h3>
                     <p class="text-slate-400 leading-relaxed mb-6">
                         I'm distinctively focused on creating clean, efficient code that powers interactive web applications. My journey involves navigating through the full stack, ensuring that the visual interface is just as robust as the server architecture supporting it.
                     </p>
-                    <p class="text-slate-400 leading-relaxed mb-8">
-                        When I'm not coding, I'm exploring new technologies and contributing to the developer community.
+                    <p class="text-slate-400 leading-relaxed">
+                        I love building products that feel intuitive and polished, whether it's a landing page, a multi-page website, or a full-featured app.
                     </p>
-                    
-                    <a href="assets/resume.pdf" target="_blank" class="inline-flex items-center px-6 py-3 border border-emerald-500 text-emerald-500 hover:bg-emerald-500 hover:text-white font-bold rounded-lg transition-all duration-300 group">
-                        Download CV
-                        <svg class="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                    </a>
                 </div>
-                
-                <!-- Skills Grid -->
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-xl font-bold text-white mb-6">Technical Skills</h3>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                        <!-- Skill Item -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                         <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-emerald-500 transition-colors text-center group">
                             <span class="block text-emerald-500 font-bold mb-1">Frontend</span>
                             <span class="text-slate-300 text-sm">React / Vue</span>
@@ -241,7 +225,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
                         <i class="fa-solid fa-code text-2xl text-emerald-400" aria-hidden="true"></i>
@@ -251,8 +234,6 @@
                         Building responsive, high-performance websites using modern technologies like React, Vue, and Tailwind CSS.
                     </p>
                 </div>
-
-                <!-- Service 2 -->
                 <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
                         <i class="fa-solid fa-server text-2xl text-emerald-400" aria-hidden="true"></i>
@@ -262,8 +243,6 @@
                         Robust server-side architecture and API development using Node.js, Python, and SQL/NoSQL databases.
                     </p>
                 </div>
-
-                <!-- Service 3 -->
                 <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
                         <i class="fa-solid fa-robot text-2xl text-emerald-400" aria-hidden="true"></i>
@@ -273,8 +252,6 @@
                         Custom automation bots for WhatsApp, Telegram, and Trading platforms to streamline your operations.
                     </p>
                 </div>
-
-                <!-- Service 4 -->
                 <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
                         <i class="fa-solid fa-pen-ruler text-2xl text-emerald-400" aria-hidden="true"></i>
@@ -284,8 +261,6 @@
                         Creating intuitive and visually appealing user interfaces that provide excellent user experiences.
                     </p>
                 </div>
-
-                <!-- Service 5 -->
                 <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
                         <i class="fa-solid fa-plug text-2xl text-emerald-400" aria-hidden="true"></i>
@@ -295,8 +270,6 @@
                         Seamlessly connecting third-party services like payment gateways, maps, and social media APIs.
                     </p>
                 </div>
-
-                <!-- Service 6 -->
                 <div class="p-8 bg-slate-900 rounded-xl shadow-lg border border-slate-700/50 hover:border-emerald-500/50 transition-all duration-300 group hover:-translate-y-2">
                     <div class="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
                         <i class="fa-solid fa-chart-line text-2xl text-emerald-400" aria-hidden="true"></i>
@@ -320,17 +293,19 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
+                <!-- Project Card: Restaurant Website (featured first) -->
                 <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
-                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
-                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🛒</span>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="ASSETS/restaurant-website-showcase.png" alt="Restaurant website homepage preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <a href="https://freshbitekitch.netlify.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent border border-emerald-500 text-emerald-400 text-sm font-semibold rounded-lg transition-colors hover:bg-emerald-500/10">
+                                <span>View Project</span>
+                            </a>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">E-Commerce Dashboard</h3>
-                        <p class="text-slate-400 text-sm mb-4">A comprehensive dashboard for managing products, orders, and analytics.</p>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">FreshBite Restaurant</h3>
+                        <p class="text-slate-400 text-sm mb-4">Fine-dining site with interactive menu, reservation CTA, and atmospheric photography to match the brand.</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">React</span>
                             <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Tailwind</span>
@@ -352,12 +327,14 @@
                     </div>
                 </article>
 
-                <!-- Project Card: Gym Website -->
+                <!-- Project Card: Gym Website (featured second) -->
                 <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
                     <div class="h-48 relative overflow-hidden">
                         <img src="ASSETS/gym-website-showcase.png" alt="Gym website landing page preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
+                            <a href="https://henry-3551.github.io/gym_website/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent border border-emerald-500 text-emerald-400 text-sm font-semibold rounded-lg transition-colors hover:bg-emerald-500/10">
+                                <span>View Project</span>
+                            </a>
                         </div>
                     </div>
                     <div class="p-6">
@@ -385,76 +362,14 @@
                     </div>
                 </article>
 
-                <!-- Project Card 2 -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
-                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
-                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">📱</span>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Social Platform</h3>
-                        <p class="text-slate-400 text-sm mb-4">Real-time social networking app with messaging and feed features.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Node.js</span>
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Socket.io</span>
-                        </div>
-                        <div class="flex flex-wrap gap-3 mt-6">
-                            <a href="javascript:void(0)" title="Live demo coming soon" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/70 text-white text-sm font-semibold rounded-lg transition-colors cursor-not-allowed">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                                </svg>
-                                <span>Live Demo</span>
-                            </a>
-                            <a href="javascript:void(0)" title="Repository coming soon" class="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/70 text-emerald-300 text-sm font-semibold rounded-lg cursor-not-allowed">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.49 2 12.02c0 4.43 2.87 8.19 6.84 9.51.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.62 9.62 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12.02C22 6.49 17.52 2 12 2z" />
-                                </svg>
-                                <span>View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project Card: Restaurant Website -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="ASSETS/restaurant-website-showcase.png" alt="Restaurant website homepage preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">FreshBite Restaurant</h3>
-                        <p class="text-slate-400 text-sm mb-4">Fine-dining site with interactive menu, reservation CTA, and atmospheric photography to match the brand.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">React</span>
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Tailwind</span>
-                        </div>
-                        <div class="flex flex-wrap gap-3 mt-6">
-                            <a href="https://freshbitekitch.netlify.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                                </svg>
-                                <span>Live Demo</span>
-                            </a>
-                            <a href="https://github.com/Henry-3551/restaurant_website" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500 text-emerald-400 text-sm font-semibold rounded-lg hover:bg-emerald-500/10 transition-colors">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.49 2 12.02c0 4.43 2.87 8.19 6.84 9.51.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.62 9.62 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12.02C22 6.49 17.52 2 12 2z" />
-                                </svg>
-                                <span>View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project Card: Henrify Translator -->
+                <!-- Project Card: Henrify Translator (featured third) -->
                 <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group">
                     <div class="h-48 relative overflow-hidden">
                         <img src="ASSETS/translator-app-showcase.png" alt="Henrify Translator interface preview" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
                         <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">Realtime & Private</span>
+                            <a href="https://henry-3551.github.io/octo-DH/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-transparent border border-emerald-500 text-emerald-400 text-sm font-semibold rounded-lg transition-colors hover:bg-emerald-500/10">
+                                <span>View Project</span>
+                            </a>
                         </div>
                     </div>
                     <div class="p-6">
@@ -482,142 +397,6 @@
                     </div>
                 </article>
 
-                <!-- Project Card 3 -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group hidden" data-project-card="extra">
-                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
-                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">⚡</span>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Task Application</h3>
-                        <p class="text-slate-400 text-sm mb-4">Productivity tool for team collaboration and task tracking.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Vue.js</span>
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Firebase</span>
-                        </div>
-                        <div class="flex flex-wrap gap-3 mt-6">
-                            <a href="javascript:void(0)" title="Live demo coming soon" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/70 text-white text-sm font-semibold rounded-lg transition-colors cursor-not-allowed">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                                </svg>
-                                <span>Live Demo</span>
-                            </a>
-                            <a href="javascript:void(0)" title="Repository coming soon" class="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/70 text-emerald-300 text-sm font-semibold rounded-lg cursor-not-allowed">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.49 2 12.02c0 4.43 2.87 8.19 6.84 9.51.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.62 9.62 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12.02C22 6.49 17.52 2 12 2z" />
-                                </svg>
-                                <span>View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project Card 4: WhatsApp Bot -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group hidden" data-project-card="extra">
-                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
-                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🤖</span>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">WhatsApp Service Bot</h3>
-                        <p class="text-slate-400 text-sm mb-4">Automated customer support agent integrating natural language processing.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Node.js</span>
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">WhatsApp API</span>
-                        </div>
-                        <div class="flex flex-wrap gap-3 mt-6">
-                            <a href="javascript:void(0)" title="Live demo coming soon" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/70 text-white text-sm font-semibold rounded-lg transition-colors cursor-not-allowed">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                                </svg>
-                                <span>Live Demo</span>
-                            </a>
-                            <a href="javascript:void(0)" title="Repository coming soon" class="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/70 text-emerald-300 text-sm font-semibold rounded-lg cursor-not-allowed">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.49 2 12.02c0 4.43 2.87 8.19 6.84 9.51.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.62 9.62 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12.02C22 6.49 17.52 2 12 2z" />
-                                </svg>
-                                <span>View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project Card 5: Crypto Bot -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group hidden" data-project-card="extra">
-                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
-                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">📈</span>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Crypto Trading Bot</h3>
-                        <p class="text-slate-400 text-sm mb-4">Algorithm-driven trading bot capable of executing high-frequency trades.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Python</span>
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Binance API</span>
-                        </div>
-                        <div class="flex flex-wrap gap-3 mt-6">
-                            <a href="javascript:void(0)" title="Live demo coming soon" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/70 text-white text-sm font-semibold rounded-lg transition-colors cursor-not-allowed">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                                </svg>
-                                <span>Live Demo</span>
-                            </a>
-                            <a href="javascript:void(0)" title="Repository coming soon" class="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/70 text-emerald-300 text-sm font-semibold rounded-lg cursor-not-allowed">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.49 2 12.02c0 4.43 2.87 8.19 6.84 9.51.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.62 9.62 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12.02C22 6.49 17.52 2 12 2z" />
-                                </svg>
-                                <span>View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project Card 6: Movie Website -->
-                <article class="bg-slate-900 rounded-xl overflow-hidden shadow-lg hover:shadow-emerald-500/10 transition-shadow duration-300 group hidden" data-project-card="extra">
-                    <div class="h-48 bg-slate-700 flex items-center justify-center relative overflow-hidden">
-                        <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎬</span>
-                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-white font-semibold">View Project</span>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Movie Discovery App</h3>
-                        <p class="text-slate-400 text-sm mb-4">Interactive platform to browse movies, watch trailers, and read reviews.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">Next.js</span>
-                            <span class="px-3 py-1 bg-slate-800 text-emerald-400 text-xs rounded-full border border-emerald-500/20">TMDb API</span>
-                        </div>
-                        <div class="flex flex-wrap gap-3 mt-6">
-                            <a href="javascript:void(0)" title="Live demo coming soon" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/70 text-white text-sm font-semibold rounded-lg transition-colors cursor-not-allowed">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
-                                </svg>
-                                <span>Live Demo</span>
-                            </a>
-                            <a href="javascript:void(0)" title="Repository coming soon" class="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/70 text-emerald-300 text-sm font-semibold rounded-lg cursor-not-allowed">
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.49 2 12.02c0 4.43 2.87 8.19 6.84 9.51.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.79.61-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.62 9.62 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10.02 10.02 0 0022 12.02C22 6.49 17.52 2 12 2z" />
-                                </svg>
-                                <span>View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <div class="text-center mt-12">
-                <button id="view-more-projects" class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold rounded-lg shadow-lg shadow-emerald-500/30 transition-colors">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                    </svg>
-                    <span>View More Projects</span>
-                </button>
             </div>
         </div>
     </section>
@@ -647,9 +426,7 @@
     </section>
 
     <!-- Testimonials Section (temporarily hidden until real submissions arrive) -->
-    <section id="testimonials" class="hidden">
-        <!-- Content intentionally preserved for future activation -->
-    </section>
+    <section id="testimonials" class="hidden"></section>
 
     <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-slate-900 border-b border-slate-800">
@@ -660,7 +437,6 @@
             </div>
 
             <div class="space-y-4">
-                <!-- FAQ Item 1 -->
                 <div class="border border-slate-700 rounded-lg overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
                         <span class="text-white font-medium">What services do you offer?</span>
@@ -674,8 +450,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 2 -->
                 <div class="border border-slate-700 rounded-lg overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
                         <span class="text-white font-medium">How long does a project take?</span>
@@ -689,8 +463,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 3 -->
                 <div class="border border-slate-700 rounded-lg overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
                         <span class="text-white font-medium">Do you provide maintenance?</span>
@@ -704,8 +476,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- FAQ Item 4 -->
                 <div class="border border-slate-700 rounded-lg overflow-hidden">
                     <button class="faq-btn w-full px-6 py-4 bg-slate-800 text-left flex justify-between items-center focus:outline-none hover:bg-slate-700 transition-colors">
                         <span class="text-white font-medium">What is your pricing model?</span>
@@ -735,7 +505,7 @@
             </div>
 
             <div class="bg-slate-800 rounded-2xl shadow-xl p-8 md:p-10">
-                <form id="contact-form" action="https://formsubmit.co/henrifydev@gmail.com" method="POST" target="contact-form-target" class="space-y-6">
+                <form id="contact-form" action="/api/contact" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
@@ -745,16 +515,15 @@
                             <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
                             <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="smith@example.com">
                         </div>
-                        <input type="hidden" name="_captcha" value="false">
-                        <!-- Honeypot field for spam protection -->
                         <div style="display:none;">
                             <label>Leave this field empty</label>
                             <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
                         </div>
+                        <input type="hidden" name="form_started_at" value="">
                     </div>
                     <div>
                         <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-                         <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors">
+                        <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors">
                             <option value="General Inquiry">General Inquiry</option>
                             <option value="Project Proposal">Project Proposal</option>
                             <option value="Consultation">Consultation</option>
@@ -769,36 +538,31 @@
                         Submit
                     </button>
                 </form>
-                <!-- Thank You Message -->
                 <div id="thank-you-message" class="hidden text-center py-12">
                     <h3 class="text-2xl font-bold text-emerald-500 mb-4">Thank you for reaching out! 🙌</h3>
                     <p class="text-slate-300 text-lg">Your message has been sent successfully. I’ll get back to you as soon as possible.</p>
                 </div>
-                <iframe name="contact-form-target" class="hidden" title="Contact form submission target"></iframe>
+                <p id="contact-error" class="hidden text-sm text-red-400 text-center">Something went wrong. Please try again.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black py-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center bg-transparent">
             <div class="mb-4 md:mb-0">
-                 <span class="text-2xl font-bold text-white flex items-center"><span class="text-4xl font-extrabold mr-2 flex items-center leading-none mb-1"><span style="color: #10B981">&lt;</span><span class="text-white">/</span><span style="color: #10B981">&gt;</span></span> Henrify<span class="text-emerald-500">.dev</span></span>
+                <span class="text-2xl font-bold text-white flex items-center"><span class="text-4xl font-extrabold mr-2 flex items-center leading-none mb-1"><span style="color: #10B981">&lt;</span><span class="text-white">/</span><span style="color: #10B981">&gt;</span></span> Henrify<span class="text-emerald-500">.dev</span></span>
             </div>
             <div class="flex space-x-6">
-                <!-- Social Links -->
                 <a href="https://github.com/Henry-3551" class="text-emerald-500 transition-colors transform hover:scale-110" aria-label="GitHub" target="_blank" rel="noopener">
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
                     </svg>
                 </a>
-                <!-- Instagram Icon -->
                 <a href="https://www.instagram.com/henrify.dev" class="text-emerald-500 transition-colors transform hover:scale-110" aria-label="Instagram" target="_blank" rel="noopener">
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5zm4.25 3.25a5.25 5.25 0 1 1-5.25 5.25A5.25 5.25 0 0 1 12 6.75zm0 1.5a3.75 3.75 0 1 0 3.75 3.75A3.75 3.75 0 0 0 12 8.25zm5.25-.75a1 1 0 1 1-1 1a1 1 0 0 1 1-1z"/>
                     </svg>
                 </a>
-                <!-- X (Twitter) Icon -->
                 <a href="https://x.com/Chukwuemerie_22" class="text-emerald-500 transition-colors transform hover:scale-110" aria-label="X" target="_blank" rel="noopener">
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -811,28 +575,6 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#home" id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl shadow-lg transition-all duration-300 transform translate-y-20 opacity-0 z-50 flex items-center justify-center">
-        <i class="fa-solid fa-chevron-up text-xl" aria-hidden="true"></i>
-    </a>
-
-   <script src="JS/app.js"></script>
-
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Henrify",
-        "url": "https://henrify.dev",
-        "sameAs": [
-            "https://github.com/Henry-3551",
-            "https://x.com/Chukwuemerie_22",
-            "https://tiktok.com/@de_enigmatic_henry",
-            "https://www.instagram.com/henrify.dev"
-        ],
-        "jobTitle": "Developer",
-        "knowsAbout": ["Vibe Coding", "Python", "JavaScript", "Node.js", "React", "Crypto Trading Bots"]
-        }
-    </script>
+    <script src="JS/app.js"></script>
 </body>
 </html>
