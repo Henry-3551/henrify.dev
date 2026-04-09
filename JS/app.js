@@ -3,6 +3,8 @@ function toggleMenu() {
     const button = document.querySelector('button[onclick="toggleMenu()"]');
     const icon = button.querySelector('svg');
     menu.classList.toggle('open');
+    document.body.classList.toggle('menu-open', menu.classList.contains('open'));
+    button.setAttribute('aria-expanded', menu.classList.contains('open') ? 'true' : 'false');
     // Toggle icon between hamburger and close (X)
     if (menu.classList.contains('open')) {
         // Change to X icon
@@ -28,6 +30,37 @@ if (loader) {
 
 // Scroll Reveal Animation
 document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMenu = () => {
+        if (!mobileMenu || !mobileMenu.classList.contains('open')) return;
+        mobileMenu.classList.remove('open');
+        document.body.classList.remove('menu-open');
+        const toggleButton = document.querySelector('button[onclick="toggleMenu()"]');
+        if (toggleButton) {
+            toggleButton.setAttribute('aria-expanded', 'false');
+            const toggleIcon = toggleButton.querySelector('svg');
+            if (toggleIcon) {
+                toggleIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />';
+            }
+        }
+    };
+
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        const closeButton = mobileMenu.querySelector('.mobile-menu-close');
+        if (closeButton) {
+            closeButton.addEventListener('click', closeMenu);
+        }
+
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target === mobileMenu) {
+                closeMenu();
+            }
+        });
+    }
     const nav = document.querySelector('.site-nav');
     const setNavState = () => {
         if (!nav) return;

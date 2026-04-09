@@ -75,16 +75,60 @@ body {
     color: var(--text-link);
 }
 .mobile-menu-bg {
-    background-color: var(--navbar-bg);
-    max-height: 0;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(2, 6, 23, 0.96);
     opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 60;
 }
 
 .mobile-menu-bg.open {
-    max-height: 50vh; /* Allow enough space for menu items */
     opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.mobile-menu-bg > div {
+    width: 100%;
+    max-width: 20rem;
+    text-align: center;
+}
+
+.mobile-menu-bg a {
+    font-size: 1.125rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #34d399;
+    background-color: transparent;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.mobile-menu-close:hover {
+    background-color: rgba(16, 185, 129, 0.12);
+    transform: scale(1.05);
+}
+
+.menu-open {
+    overflow: hidden;
 }
 
 .text-green {
