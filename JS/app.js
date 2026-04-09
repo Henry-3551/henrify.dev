@@ -28,6 +28,18 @@ if (loader) {
 
 // Scroll Reveal Animation
 document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('.site-nav');
+    const setNavState = () => {
+        if (!nav) return;
+        if (window.scrollY > 20) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    };
+    setNavState();
+    window.addEventListener('scroll', setNavState, { passive: true });
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
