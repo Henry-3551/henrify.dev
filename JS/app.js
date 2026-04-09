@@ -264,7 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (!response.ok) {
-                    throw new Error('Request failed');
+                    const data = await response.json().catch(() => ({}));
+                    const message = data.error || 'Something went wrong. Please try again.';
+                    if (contactError) {
+                        contactError.textContent = message;
+                        contactError.classList.remove('hidden');
+                    }
+                    return;
                 }
 
                 contactForm.classList.add('hidden');
@@ -281,7 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     }, 600);
                 }, 3500);
             } catch (error) {
-                if (contactError) contactError.classList.remove('hidden');
+                if (contactError) {
+                    contactError.textContent = 'Something went wrong. Please try again.';
+                    contactError.classList.remove('hidden');
+                }
             }
         });
     }

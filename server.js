@@ -38,7 +38,7 @@ const escapeHtml = (value) => {
 
 const contactLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
-  max: 5,
+  max: 10,
   standardHeaders: true,
   legacyHeaders: false,
   message: { error: "Too many requests. Please try again later." }
@@ -67,19 +67,19 @@ app.post("/api/contact", contactLimiter, async (req, res) => {
     return res.status(400).json({ error: "One or more fields are too long." });
   }
 
-  if (safeMessageInput.length < 10) {
+  if (safeMessageInput.length < 3) {
     return res.status(400).json({ error: "Message is too short." });
   }
 
   const linkCount = countLinks(safeMessageInput);
-  if (linkCount > 2) {
+  if (linkCount > 4) {
     return res.status(400).json({ error: "Too many links in message." });
   }
 
   const startedAt = Number(form_started_at || 0);
   if (startedAt && Number.isFinite(startedAt)) {
     const elapsedMs = Date.now() - startedAt;
-    if (elapsedMs < 3000) {
+    if (elapsedMs < 1500) {
       return res.status(400).json({ error: "Form submitted too quickly." });
     }
   }
