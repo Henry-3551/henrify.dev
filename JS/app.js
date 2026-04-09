@@ -274,11 +274,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-    // Contact Form: Custom Thank You Message
+    // Contact Form: Redirect to Thank You page
     const contactForm = document.getElementById('contact-form');
-    const thankYouMsg = document.getElementById('thank-you-message');
     const contactError = document.getElementById('contact-error');
-    if (contactForm && thankYouMsg) {
+    if (contactForm) {
         const startedAtInput = contactForm.querySelector('input[name="form_started_at"]');
         if (startedAtInput && !startedAtInput.value) {
             startedAtInput.value = Date.now();
@@ -318,19 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                contactForm.classList.add('hidden');
-                thankYouMsg.classList.remove('hidden');
-                thankYouMsg.classList.remove('fade-out');
-
-                setTimeout(() => {
-                    thankYouMsg.classList.add('fade-out');
-                    setTimeout(() => {
-                        thankYouMsg.classList.add('hidden');
-                        thankYouMsg.classList.remove('fade-out');
-                        contactForm.classList.remove('hidden');
-                        contactForm.reset();
-                    }, 600);
-                }, 3500);
+                window.location.href = 'thank-you.html';
             } catch (error) {
                 if (contactError) {
                     contactError.textContent = 'Something went wrong. Please try again.';
