@@ -44,10 +44,18 @@ const contactLimiter = rateLimit({
   message: { error: "Too many requests. Please try again later." }
 });
 
+const dailyLimiter = rateLimit({
+  windowMs: 24 * 60 * 60 * 1000,
+  max: 10,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Daily submission limit reached. Please try again tomorrow." }
+});
+
 const normalizeText = (value) => String(value || "").trim();
 const countLinks = (value) => (value.match(/https?:\/\/|www\./gi) || []).length;
 
-app.post("/api/contact", contactLimiter, async (req, res) => {
+app.post("/api/contact", dailyLimiter, contactLimiter, async (req, res) => {
   const { name, email, subject, message, _gotcha, form_started_at } = req.body || {};
 
   if (_gotcha) {
