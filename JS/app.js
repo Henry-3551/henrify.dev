@@ -274,10 +274,45 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
-    // Contact Form: Redirect to Thank You page
+    // Contact Form: API submit + redirect to Thank You page
     const contactForm = document.getElementById('contact-form');
     const contactError = document.getElementById('contact-error');
     if (contactForm) {
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const defaultButtonText = submitButton ? submitButton.textContent : 'Submit';
+
+        const resolveContactApiUrl = () => {
+            const datasetUrl = (contactForm.dataset.apiUrl || '').trim();
+            const actionUrl = (contactForm.getAttribute('action') || '').trim();
+            const fallbackUrl = 'https://henrify-dev.onrender.com/api/contact';
+            const rawUrl = datasetUrl || actionUrl || fallbackUrl;
+
+            try {
+                return new URL(rawUrl, window.location.origin).toString();
+            } catch (error) {
+                return fallbackUrl;
+            }
+        };
+
+        const contactApiUrl = resolveContactApiUrl();
+
+        // Warm the Render API in the background so the first user submit is less likely to hit cold start.
+        try {
+            const healthUrl = new URL('/api/health', contactApiUrl).toString();
+            fetch(healthUrl, { method: 'GET', cache: 'no-store', mode: 'cors' }).catch(() => {});
+        } catch (error) {
+            // No-op: health warmup is best effort.
+        }
+
+        const setSubmittingState = (isSubmitting, hintText = 'Sending...') => {
+            if (!submitButton) return;
+
+            submitButton.disabled = isSubmitting;
+            submitButton.textContent = isSubmitting ? hintText : defaultButtonText;
+            submitButton.classList.toggle('opacity-70', isSubmitting);
+            submitButton.classList.toggle('cursor-not-allowed', isSubmitting);
+        };
+
         const startedAtInput = contactForm.querySelector('input[name="form_started_at"]');
         if (startedAtInput && !startedAtInput.value) {
             startedAtInput.value = Date.now();
@@ -300,14 +335,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 form_started_at: formData.get('form_started_at')
             };
 
+            setSubmittingState(true);
+            const coldStartHintTimer = setTimeout(() => {
+                setSubmittingState(true, 'Waking server...');
+            }, 3000);
+
             try {
-                const response = await fetch(contactForm.action, {
+                const response = await fetch(contactApiUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
 
                 if (!response.ok) {
+                    clearTimeout(coldStartHintTimer);
+                    setSubmittingState(false);
                     const data = await response.json().catch(() => ({}));
                     const message = data.error || 'Something went wrong. Please try again.';
                     if (contactError) {
@@ -317,8 +359,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
+                clearTimeout(coldStartHintTimer);
                 window.location.href = 'thank-you.html';
             } catch (error) {
+                clearTimeout(coldStartHintTimer);
+                setSubmittingState(false);
                 if (contactError) {
                     contactError.textContent = 'Something went wrong. Please try again.';
                     contactError.classList.remove('hidden');

@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const { Resend } = require("resend");
 require("dotenv").config();
@@ -12,6 +13,41 @@ app.set("trust proxy", 1);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname)));
+
+const defaultAllowedOrigins = [
+  "https://henrify.dev",
+  "https://www.henrify.dev",
+  "http://localhost:5500",
+  "http://127.0.0.1:5500",
+  "http://localhost:3000"
+];
+
+const envAllowedOrigins = String(process.env.ALLOWED_ORIGINS || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
+const allowedOrigins = [...new Set([...defaultAllowedOrigins, ...envAllowedOrigins])];
+
+const apiCors = cors({
+  origin: (origin, callback) => {
+    // Allow non-browser requests (health checks, curl, server-to-server).
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    return callback(new Error("Origin not allowed"));
+  },
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"]
+});
+
+app.use("/api", apiCors);
+app.options("/api/*", apiCors);
 
 const requiredEnv = [
   "RESEND_API_KEY",
@@ -54,6 +90,10 @@ const dailyLimiter = rateLimit({
 
 const normalizeText = (value) => String(value || "").trim();
 const countLinks = (value) => (value.match(/https?:\/\/|www\./gi) || []).length;
+
+app.get("/api/health", (req, res) => {
+  return res.status(200).json({ ok: true, service: "contact-api" });
+});
 
 app.post("/api/contact", dailyLimiter, contactLimiter, async (req, res) => {
   const { name, email, subject, message, _gotcha, form_started_at } = req.body || {};
@@ -172,6 +212,14 @@ app.post("/api/contact", dailyLimiter, contactLimiter, async (req, res) => {
     console.error("Email send failed:", error);
     return res.status(500).json({ error: "Email send failed." });
   }
+});
+
+app.use((error, req, res, next) => {
+  if (error && error.message === "Origin not allowed") {
+    return res.status(403).json({ error: "Origin not allowed." });
+  }
+
+  return next(error);
 });
 
 app.listen(port, () => {
