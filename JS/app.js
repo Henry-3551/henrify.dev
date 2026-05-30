@@ -248,8 +248,32 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.querySelectorAll('form#contact-form').forEach((form) => {
+        const submitButton = form.querySelector('.contact-submit-btn');
+        const submitText = form.querySelector('.contact-submit-text');
+        const submitSpinner = form.querySelector('.contact-submit-spinner');
+        const submitIcon = form.querySelector('.contact-submit-icon');
+
+        const setSubmittingState = (isSubmitting) => {
+            if (!submitButton) return;
+
+            submitButton.disabled = isSubmitting;
+
+            if (submitText) {
+                submitText.textContent = isSubmitting ? 'Sending...' : 'Send';
+            }
+
+            if (submitSpinner) {
+                submitSpinner.classList.toggle('hidden', !isSubmitting);
+            }
+
+            if (submitIcon) {
+                submitIcon.classList.toggle('hidden', isSubmitting);
+            }
+        };
+
         form.addEventListener('submit', async (event) => {
             event.preventDefault();
+            setSubmittingState(true);
 
             const state = getLimitState();
             const today = getTodayKey();
@@ -271,6 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (message) {
                 alert(message);
+                setSubmittingState(false);
                 return;
             }
 
@@ -297,6 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'thank-you.html';
             } catch (error) {
                 alert('Sorry, your message could not be sent right now. Please try again in a moment.');
+                setSubmittingState(false);
             }
         });
     });
