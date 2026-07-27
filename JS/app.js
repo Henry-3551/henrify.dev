@@ -210,42 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Formspree submission handling with custom redirect and local submission limits.
-    const submissionLimitKey = 'henrify-contact-limits';
-    const getLimitState = () => {
-        try {
-            const rawState = localStorage.getItem(submissionLimitKey);
-            return rawState ? JSON.parse(rawState) : { day: null, month: null, dailyCount: 0, monthlyCount: 0 };
-        } catch (error) {
-            return { day: null, month: null, dailyCount: 0, monthlyCount: 0 };
-        }
-    };
-
-    const saveLimitState = (state) => {
-        try {
-            localStorage.setItem(submissionLimitKey, JSON.stringify(state));
-        } catch (error) {
-            // Ignore storage failures and allow the form to continue.
-        }
-    };
-
-    const getTodayKey = () => new Date().toISOString().slice(0, 10);
-    const getMonthKey = () => new Date().toISOString().slice(0, 7);
-    const getFriendlyLimitMessage = (remainingDaily, remainingMonthly) => {
-        if (remainingDaily <= 0 && remainingMonthly <= 0) {
-            return 'You have reached the contact form limit for today and this month. Please try again tomorrow or next month.';
-        }
-
-        if (remainingDaily <= 0) {
-            return 'You have reached the daily contact form limit. Please try again tomorrow.';
-        }
-
-        if (remainingMonthly <= 0) {
-            return 'You have reached the monthly contact form limit. Please try again next month.';
-        }
-
-        return '';
-    };
+    // Formspree submission handling with custom redirect.
 
     document.querySelectorAll('form#contact-form').forEach((form) => {
         const submitButton = form.querySelector('.contact-submit-btn');
@@ -275,30 +240,6 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
             setSubmittingState(true);
 
-            const state = getLimitState();
-            const today = getTodayKey();
-            const month = getMonthKey();
-
-            if (state.day !== today) {
-                state.day = today;
-                state.dailyCount = 0;
-            }
-
-            if (state.month !== month) {
-                state.month = month;
-                state.monthlyCount = 0;
-            }
-
-            const remainingDaily = 2 - state.dailyCount;
-            const remainingMonthly = 10 - state.monthlyCount;
-            const message = getFriendlyLimitMessage(remainingDaily, remainingMonthly);
-
-            if (message) {
-                alert(message);
-                setSubmittingState(false);
-                return;
-            }
-
             const formData = new URLSearchParams(new FormData(form));
             const formAction = form.getAttribute('action');
 
@@ -315,10 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!response.ok) {
                     throw new Error('Submission failed');
                 }
-
-                state.dailyCount += 1;
-                state.monthlyCount += 1;
-                saveLimitState(state);
 
                 window.location.href = 'thank-you.html';
             } catch (error) {
