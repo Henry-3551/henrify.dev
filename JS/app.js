@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            const formData = new FormData(form);
+            const formData = new URLSearchParams(new FormData(form));
             const formAction = form.getAttribute('action');
 
             try {
@@ -307,6 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     method: 'POST',
                     body: formData,
                     headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
                         Accept: 'application/json'
                     }
                 });
