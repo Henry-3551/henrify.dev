@@ -145,7 +145,7 @@
                 <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's Work Together</h1>
                 <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full mb-6"></div>
                 <p class="text-slate-400 text-lg max-w-2xl mx-auto">
-                    Have a website, SEO, automation, or web app project in mind? Hire Henrify, and I'll get back to you within an hour.
+                    Tell me a little about what you are building. The more context you share, the more useful my reply can be. Prefer a quick conversation? <a class="text-emerald-400 hover:text-emerald-300 underline underline-offset-4" href="https://wa.me/2347044249794?text=Hello%20Henrify%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Message me on WhatsApp</a>.
                 </p>
             </div>
             <div class="bg-slate-800 rounded-2xl shadow-xl p-8 md:p-10">
@@ -159,23 +159,27 @@
                             <label for="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
                             <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="smith@example.com">
                         </div>
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-slate-300 mb-2">Company or brand <span class="text-slate-500">(optional)</span></label>
+                            <input type="text" id="company" name="company" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="Your business name">
+                        </div>
+                        <div>
+                            <label for="contact_method" class="block text-sm font-medium text-slate-300 mb-2">Preferred reply method</label>
+                            <select id="contact_method" name="contact_method" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors"><option>Email</option><option>WhatsApp</option><option>Phone call</option></select>
+                        </div>
                         <div hidden>
                             <label for="_gotcha">Leave this field empty</label>
                             <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
                         </div>
                     </div>
-                    <div>
-                        <label for="subject" class="block text-sm font-medium text-slate-300 mb-2">Subject</label>
-                         <select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors">
-                            <option value="General Inquiry">General Inquiry</option>
-                            <option value="Project Proposal">Project Proposal</option>
-                            <option value="Consultation">Consultation</option>
-                            <option value="Other">Other</option>
-                        </select>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div><label for="subject" class="block text-sm font-medium text-slate-300 mb-2">What do you need?</label><select id="subject" name="subject" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors"><option value="Website or landing page">Website or landing page</option><option value="Web application or SaaS">Web application or SaaS</option><option value="SEO or performance work">SEO or performance work</option><option value="Automation or integration">Automation or integration</option><option value="Other">Something else</option></select></div>
+                        <div><label for="timeline" class="block text-sm font-medium text-slate-300 mb-2">Ideal timeline</label><select id="timeline" name="timeline" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors"><option>I'm flexible</option><option>Within 2 weeks</option><option>Within a month</option><option>1–3 months</option><option>Still exploring</option></select></div>
+                        <div class="md:col-span-2"><label for="budget" class="block text-sm font-medium text-slate-300 mb-2">Estimated investment <span class="text-slate-500">(optional)</span></label><select id="budget" name="budget" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white transition-colors"><option value="Not sure yet">Not sure yet</option><option value="Under ₦150,000">Under ₦150,000</option><option value="₦150,000–₦500,000">₦150,000–₦500,000</option><option value="₦500,000–₦1,000,000">₦500,000–₦1,000,000</option><option value="Above ₦1,000,000">Above ₦1,000,000</option></select></div>
                     </div>
                     <div>
-                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="Tell me about your project..."></textarea>
+                        <label for="message" class="block text-sm font-medium text-slate-300 mb-2">Tell me about the project</label>
+                        <textarea id="message" name="message" required rows="5" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-white placeholder-slate-500 transition-colors" placeholder="What are you trying to achieve, and what would a successful project look like?"></textarea>
                     </div>
                     <button type="submit" class="contact-submit-btn w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 rounded-lg transition-all transform hover:-translate-y-1 shadow-lg shadow-emerald-500/20 inline-flex items-center justify-center gap-2 disabled:opacity-80 disabled:cursor-not-allowed">
                         <span class="contact-submit-text">Send</span>
@@ -189,6 +193,8 @@
             </div>
         </div>
     </section>
+
+    <a class="whatsapp-float" href="https://wa.me/2347044249794?text=Hello%20Henrify%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" aria-label="Chat with Henrify on WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
 
     <footer class="bg-black py-8 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center bg-transparent">
