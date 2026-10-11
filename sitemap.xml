@@ -72,4 +72,10 @@
     <priority>0.6</priority>
     <lastmod>2026-06-27</lastmod>
   </url>
+  <url>
+    <loc>https://henrify.dev/pixhira/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-10-11</lastmod>
+  </url>
 </urlset>

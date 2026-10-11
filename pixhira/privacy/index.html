@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pixhira Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Pixhira, the on-device AI photo search app published by Henrify.">
+  <link rel="canonical" href="https://henrify.dev/pixhira/privacy/">
+  <style>
+    body { font: 17px/1.65 system-ui, sans-serif; max-width: 760px; margin: 40px auto; padding: 0 24px; color: #202124; background: #fff; }
+    h1 { line-height: 1.2; }
+    h2 { font-size: 1.15em; margin-top: 32px; }
+    a { color: #0659bf; }
+    .draft { padding: 16px; border: 2px solid #b45309; background: #fff7ed; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Pixhira Privacy Policy</h1>
+    <p class="draft"><strong>Draft — do not publish yet.</strong> Confirm the publisher identity and verify the privacy/support mailbox before public release.</p>
+    <p>Updated 2026-10-11</p>
+    <p>AI Photo Search · Find any photo. Just describe it.</p>
+    <p>Publisher: Henrify</p>
+
+    <section>
+      <h2>Photo access and local search</h2>
+      <p>Pixhira, published under the Henrify brand, accesses photos you allow it to read so you can search your library on your device. It reads photo pixels to compute a numerical search representation, and saves that representation alongside the photo's library ID, file reference, dates and dimensions. AI image and text processing use downloaded models running on your device. Search words and ranked results are held in memory for the current screen, not saved in the photo database. This version does not upload your photos, search words or saved search index to a developer-operated service.</p>
+    </section>
+
+    <section>
+      <h2>Network connections</h2>
+      <p>The app downloads AI model and tokenizer files from the configured model host and its delivery providers. The default host is Hugging Face. Those providers receive ordinary download-request information, such as your IP address and the requested file. Photos and search words are not included in these model downloads. The app has no remote AI inference endpoint. If a photo is stored with a device-managed cloud-photo service, your operating system or photo provider may retrieve it under your existing settings before the app processes it locally. Opening a public policy or verified support link uses your browser or email app.</p>
+    </section>
+
+    <section>
+      <h2>Retention and restricted access</h2>
+      <p>Saved photo records and search representations remain in the app's local storage until you clear the photo index, clear the app's storage through device settings, or uninstall the app. A successful full-library scan removes records for missing photos. When you reduce photo access, previously saved records for excluded photos are hidden but may be retained so that restoring access can reuse their index. Clear Photo Index removes those retained records too. Prepared images are temporary files that the app attempts to remove after processing; device-managed caches may be cleared separately by the operating system.</p>
+    </section>
+
+    <section>
+      <h2>Your data controls</h2>
+      <p>Use Privacy &amp; Data → Clear Photo Index to remove saved photo records and search representations, including records for photos that are no longer accessible. This does not delete your original photos or public AI model downloads. Automatic library scans pause after clearing until you choose Scan Library again. To remove downloaded models and other app files as well, clear app storage in device settings or uninstall the app. You can change photo access in device settings at any time. Clearing the app does not remove copies of original photos stored in your photo provider or backups made previously.</p>
+    </section>
+
+    <section>
+      <h2>Storage and backups</h2>
+      <p>This policy covers Pixhira's initial Android release. The index is stored in the app's private storage; the app does not separately encrypt its SQLite database. Device security also depends on your operating system and device settings. The Android build is configured to disable app backup and explicitly exclude app files and databases from cloud backup and device transfer. Earlier backups or copies outside the app can remain until you manage them through the relevant device or provider. Local deletion is not a guarantee of forensic erasure from storage hardware. Data practices for future platforms will be reviewed before release.</p>
+    </section>
+
+    <section>
+      <h2>Accounts, advertising and diagnostics</h2>
+      <p>This production app has no user accounts, advertising, analytics service or remote crash-reporting SDK. Battery level and power-saving status are read locally to pause indexing when appropriate; they are not saved in the photo database or sent to the publisher. If you contact a verified support mailbox, your email provider and the publisher will receive the information you choose to send. Avoid including private photos or search results unless you intend to share them.</p>
+    </section>
+
+    <section>
+      <h2>Changes and contact</h2>
+      <p>This policy will be updated if the app's data practices change. The policy's update date and publisher contact details appear with this notice.</p>
+    </section>
+
+    <p>Privacy and support contact: support@henrify.dev (proposed; verification pending, availability not confirmed)</p>
+  </main>
+</body>
+</html>
